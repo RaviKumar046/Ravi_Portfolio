@@ -3,105 +3,1518 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ravi Kumar | Portfolio</title>
-  <link rel="icon" type="image/png" href="https://i.ibb.co/Ss9f8M4/ravi-icon.png">
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white font-sans scroll-smooth">
 
-  <!-- Navbar -->
-  <header class="bg-gray-800 shadow-lg fixed w-full top-0 z-50">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-white">Ravi Kumar</h1>
-      <nav>
-        <ul class="flex gap-6">
-          <li><a href="#about" class="hover:text-cyan-400">About</a></li>
-          <li><a href="#skills" class="hover:text-cyan-400">Skills</a></li>
-          <li><a href="#projects" class="hover:text-cyan-400">Projects</a></li>
-          <li><a href="#contact" class="hover:text-cyan-400">Contact</a></li>
+  <title>Ravi Kumar | ECE Student • Developer • Researcher</title>
+
+  <meta
+    name="description"
+    content="Ravi Kumar — Electronics and Communication Engineering student at NIT Delhi interested in VLSI, semiconductor devices, embedded systems, machine learning and software development."
+  />
+
+  <link
+    rel="icon"
+    type="image/jpeg"
+    href="C:\Users\ravi9\OneDrive\Desktop\Code\WEBdev\temp\portimg.jpeg"
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #22d3ee,
+        #3b82f6,
+        #a855f7,
+        #22d3ee
+      );
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 6s linear infinite;
+    }
+
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% center;
+      }
+
+      100% {
+        background-position: 300% center;
+      }
+    }
+
+    .float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .pulse-slow {
+      animation: pulseSlow 4s ease-in-out infinite;
+    }
+
+    @keyframes pulseSlow {
+      0%,
+      100% {
+        opacity: 0.35;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.65;
+        transform: scale(1.08);
+      }
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .glass {
+      background: rgba(31, 41, 55, 0.55);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .skill-card {
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      border-color: rgba(34, 211, 238, 0.45);
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(34, 211, 238, 0.10);
+      background: rgba(31, 41, 55, 0.9);
+    }
+
+    .project-card {
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(34, 211, 238, 0.4);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
+
+    .social-btn {
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+      border-color: rgba(34, 211, 238, 0.45);
+      background: rgba(34, 211, 238, 0.12);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .typing-cursor {
+      border-right: 2px solid #22d3ee;
+      padding-right: 4px;
+    }
+
+    .glow {
+      box-shadow: 0 0 80px rgba(34, 211, 238, 0.08);
+    }
+
+    ::selection {
+      background: rgba(34, 211, 238, 0.3);
+      color: white;
+    }
+
+    html,
+    body {
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    html[data-theme="light"] body {
+      background-color: #f4f7f5;
+      color: #172720;
+    }
+
+    html[data-theme="light"] .bg-gray-950 {
+      background-color: #f4f7f5 !important;
+    }
+
+    html[data-theme="light"] .bg-gray-900 {
+      background-color: #e8efeb !important;
+    }
+
+    html[data-theme="light"] .bg-gray-800 {
+      background-color: #dce7e1 !important;
+    }
+
+    html[data-theme="light"] header {
+      background-color: rgba(244, 247, 245, 0.94);
+      border-color: rgba(23, 39, 32, 0.12);
+    }
+
+    html[data-theme="light"] #mobileMenu {
+      background-color: rgba(244, 247, 245, 0.98);
+      border-color: rgba(23, 39, 32, 0.12);
+    }
+
+    html[data-theme="light"] .text-white,
+    html[data-theme="light"] .text-gray-200,
+    html[data-theme="light"] .text-gray-300 {
+      color: #20352c;
+    }
+
+    html[data-theme="light"] .text-gray-400 {
+      color: #465c52;
+    }
+
+    html[data-theme="light"] .text-gray-500,
+    html[data-theme="light"] .text-gray-600 {
+      color: #5b7066;
+    }
+
+    html[data-theme="light"] .text-cyan-400 {
+      color: #087f83;
+    }
+
+    html[data-theme="light"] .text-blue-400 {
+      color: #285ca3;
+    }
+
+    html[data-theme="light"] .text-purple-400 {
+      color: #70439a;
+    }
+
+    html[data-theme="light"] .text-green-400 {
+      color: #267348;
+    }
+
+    html[data-theme="light"] .text-pink-400 {
+      color: #a03c70;
+    }
+
+    html[data-theme="light"] .text-orange-400 {
+      color: #a65b1c;
+    }
+
+    html[data-theme="light"] .gradient-text {
+      background-image: linear-gradient(90deg, #087f83, #285ca3, #70439a, #087f83);
+    }
+
+    html[data-theme="light"] .glass {
+      background: rgba(255, 255, 255, 0.82);
+      border-color: rgba(23, 39, 32, 0.12);
+      box-shadow: 0 12px 32px rgba(23, 39, 32, 0.06);
+    }
+
+    html[data-theme="light"] .skill-card:hover {
+      background: #ffffff;
+    }
+
+    html[data-theme="light"] .grid-bg {
+      background-image:
+        linear-gradient(rgba(23, 39, 32, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23, 39, 32, 0.035) 1px, transparent 1px);
+    }
+
+    html[data-theme="light"] footer {
+      border-color: rgba(23, 39, 32, 0.12);
+    }
+
+    html[data-theme="light"] .timeline-marker {
+      background-color: #f4f7f5;
+    }
+
+    .theme-icon-moon {
+      display: none;
+    }
+
+    html[data-theme="light"] .theme-icon-sun {
+      display: none;
+    }
+
+    html[data-theme="light"] .theme-icon-moon {
+      display: block;
+    }
+  </style>
+  <script>
+    try {
+      document.documentElement.dataset.theme =
+        localStorage.getItem("portfolio-theme") || "dark";
+    } catch {
+      document.documentElement.dataset.theme = "dark";
+    }
+  </script>
+</head>
+
+<body class="bg-gray-950 text-white">
+
+  <!-- ================= NAVBAR ================= -->
+  <header
+    class="fixed top-0 left-0 w-full z-50 bg-gray-950/80 backdrop-blur-xl border-b border-white/5"
+  >
+    <div
+      class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+    >
+
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-bold shadow-lg shadow-cyan-500/20"
+        >
+          <img src="portimg.jpeg" alt="Ravi Kumar" class="w-full h-full rounded-xl object-cover">
+        </div>
+
+        <div class="hidden sm:block">
+          <p class="font-bold">Ravi Kumar</p>
+          <p class="text-xs text-gray-400">ECE • Developer • Researcher</p>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:block">
+        <ul class="flex items-center gap-8 text-sm text-gray-300">
+          <li>
+            <a href="#about" class="hover:text-cyan-400 transition">
+              About
+            </a>
+          </li>
+
+          <li>
+            <a href="#skills" class="hover:text-cyan-400 transition">
+              Skills
+            </a>
+          </li>
+
+          <li>
+            <a href="#projects" class="hover:text-cyan-400 transition">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="#contact" class="hover:text-cyan-400 transition">
+              Contact
+            </a>
+          </li>
         </ul>
+      </nav>
+
+      <button
+        id="themeBtn"
+        type="button"
+        class="social-btn glass p-2.5 rounded-xl text-gray-300"
+        aria-label="Switch to light mode"
+        title="Switch to light mode"
+      >
+        <svg class="theme-icon-sun w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42" />
+        </svg>
+        <svg class="theme-icon-moon w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5 8.5 8.5 0 1 0 20.5 14.2Z" />
+        </svg>
+      </button>
+
+      <!-- Mobile Button -->
+      <button
+        id="menuBtn"
+        class="md:hidden text-gray-300 hover:text-cyan-400"
+        aria-label="Open menu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-7 h-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="1.8"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div
+      id="mobileMenu"
+      class="hidden md:hidden bg-gray-950/95 border-t border-white/5"
+    >
+      <nav class="px-6 py-5">
+        <a href="#about" class="block py-3 text-gray-300 hover:text-cyan-400">
+          About
+        </a>
+
+        <a href="#skills" class="block py-3 text-gray-300 hover:text-cyan-400">
+          Skills
+        </a>
+
+        <a
+          href="#projects"
+          class="block py-3 text-gray-300 hover:text-cyan-400"
+        >
+          Projects
+        </a>
+
+        <a
+          href="#contact"
+          class="block py-3 text-gray-300 hover:text-cyan-400"
+        >
+          Contact
+        </a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800" id="home">
-    <div class="text-center px-6">
-      <h2 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Ravi Kumar</h2>
-      <p class="text-lg md:text-2xl mb-6">ECE Student at NIT Delhi | Aspiring Software & Electronics Engineer </p>
-      <a href="#contact" class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full text-white font-semibold">Hire Me</a>
-    </div>
-  </section>
+  <!-- ================= HERO ================= -->
+  <section
+    id="home"
+    class="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg"
+  >
 
-  <!-- About -->
-  <section id="about" class="py-20 bg-gray-800">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h3 class="text-3xl font-bold mb-6 border-b pb-2 border-cyan-500">About Me</h3>
-      <p class="text-lg leading-relaxed">
-        I'm Ravi Kumar, a Pre-Final year B.Tech student in Electronics and Communication Engineering at NIT Delhi (Batch 2024–2028).
-        My work sits at the intersection of hardware and machine learning.Recently, i completed my Research summer internship(2026) from IIT ROPAR. I also bring hands-on semiconductor fabrication experience
-        from CSIR-CEERI Pilani, alongside strong foundations in Data Structures & Algorithms, embedded systems, and full-stack
-        development. I'm always looking to build systems that bridge device physics and intelligent computing.
+    <!-- Background glow -->
+    <div
+      class="absolute w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl top-20 -left-20 pulse-slow"
+    ></div>
+
+    <div
+      class="absolute w-96 h-96 bg-blue-600/10 rounded-full blur-3xl bottom-10 -right-20 pulse-slow"
+    ></div>
+
+    <div class="relative max-w-5xl mx-auto px-6 text-center pt-20">
+
+      <!-- Status -->
+      <div
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-gray-300 mb-8 float"
+      >
+        <span
+          class="w-2 h-2 rounded-full bg-green-400 shadow-lg shadow-green-400/50"
+        ></span>
+
+        Open to internships & collaborations
+      </div>
+
+      <h1
+        class="text-5xl sm:text-6xl md:text-8xl font-extrabold tracking-tight"
+      >
+        Hi, I'm
+        <span class="gradient-text">Ravi Kumar</span>
+      </h1>
+
+      <div
+        class="mt-6 text-xl md:text-2xl text-gray-300 font-medium min-h-[40px]"
+      >
+        <span id="typingText" class="typing-cursor"></span>
+      </div>
+
+      <p
+        class="mt-8 max-w-3xl mx-auto text-gray-400 leading-relaxed text-base md:text-lg"
+      >
+        Electronics & Communication Engineering student at
+        <span class="text-white font-semibold">NIT Delhi</span>,
+        exploring the intersection of semiconductor devices,
+        VLSI, embedded systems, machine learning and software engineering.
       </p>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h3 class="text-3xl font-bold mb-6 border-b pb-2 border-cyan-500">Skills</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div class="bg-gray-800 p-4 rounded shadow">C++</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Data Structures & Algorithms</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Python</div>
-        <div class="bg-gray-800 p-4 rounded shadow">MATLAB</div>
-        <div class="bg-gray-800 p-4 rounded shadow">HTML & CSS</div>
-        <div class="bg-gray-800 p-4 rounded shadow">JavaScript</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Tailwind CSS</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Git & GitHub</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Cadence Virtuoso</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Verilog A</div>
-        <div class="bg-gray-800 p-4 rounded shadow">Embedded Systems (Arduino/ESP32)</div>
-        <div class="bg-gray-800 p-4 rounded shadow">AI Hardware / Neuromorphic Computing</div>
+      <!-- Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+
+        <a
+          href="#projects"
+          class="px-7 py-3.5 rounded-full bg-cyan-500 text-gray-950 font-bold hover:bg-cyan-400 hover:-translate-y-1 transition shadow-lg shadow-cyan-500/20"
+        >
+          Explore My Work
+        </a>
+
+        <a
+          href="#contact"
+          class="px-7 py-3.5 rounded-full border border-gray-700 text-gray-200 hover:border-cyan-400 hover:text-cyan-400 transition"
+        >
+          Let's Connect
+        </a>
+
+      </div>
+
+      <!-- Social links -->
+      <div class="flex justify-center gap-4 mt-8">
+
+        <a
+          href="https://github.com/RaviKumar046"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn glass px-4 py-3 rounded-xl"
+          aria-label="GitHub"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.85 10.92.57.1.78-.25.78-.55v-2.14c-3.19.69-3.86-1.36-3.86-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.67 1.25 3.32.95.1-.74.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.15 1.18.91-.25 1.89-.38 2.87-.38.98 0 1.96.13 2.87.38 2.19-1.49 3.15-1.18 3.15-1.18.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.41.35.77 1.04.77 2.1v3.11c0 .3.2.66.79.55A11.52 11.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/ravi-kumar-338667316"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn glass px-4 py-3 rounded-xl"
+          aria-label="LinkedIn"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.3ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V8.99h3.56v11.46ZM22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0Z"
+            />
+          </svg>
+        </a>
+
+        <a
+          href="https://leetcode.com/ravi2k25"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn glass px-4 py-3 rounded-xl"
+          aria-label="LeetCode"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M14 4l-6 6 6 6M10 10h8M6 20h9"
+            />
+          </svg>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 bg-gray-800">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h3 class="text-3xl font-bold mb-6 border-b pb-2 border-cyan-500">Projects</h3>
-      <div class="space-y-6">
-        <div class="bg-gray-700 p-6 rounded shadow">
-          <h4 class="text-xl font-semibold mb-2">FTJ-Based Crossbar Array Design for Neuromorphic Computing </h4>
-          <p>Research project on Ferroelectric Tunnel Junction-based neuromorphic computing. Implemented VGG-8 in PyTorch for CIFAR-10, applied quantization-aware training, and performed hardware-aware inference simulation for crossbar weight mapping.</p>
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="py-28 bg-gray-900">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="grid lg:grid-cols-3 gap-8 items-start">
+
+        <!-- Intro -->
+        <div class="lg:col-span-2 reveal">
+
+          <p class="text-cyan-400 uppercase tracking-[0.25em] text-sm font-semibold">
+            About Me
+          </p>
+
+          <h2 class="mt-3 text-4xl md:text-5xl font-bold">
+            Building at the intersection of
+            <span class="gradient-text">hardware & intelligence.</span>
+          </h2>
+
+          <p class="mt-6 text-gray-400 text-lg leading-8">
+            I'm Ravi Kumar, a Pre-Final Year B.Tech student in
+            Electronics and Communication Engineering at NIT Delhi
+            (2024–2028).
+          </p>
+
+          <p class="mt-4 text-gray-400 text-lg leading-8">
+            My interests span semiconductor devices, VLSI design,
+            neuromorphic computing, embedded systems, machine learning,
+            communication systems and software development.
+          </p>
+
+          <p class="mt-4 text-gray-400 text-lg leading-8">
+            I completed a research internship at IIT Ropar in 2026,
+            where I worked on ferroelectric tunnel junction based
+            crossbar architectures for neuromorphic computing.
+            I also gained hands-on semiconductor fabrication experience
+            through the CSIR-CEERI Pilani SHILP workshop.
+          </p>
+
         </div>
-        <div class="bg-gray-700 p-6 rounded shadow">
-          <h4 class="text-xl font-semibold mb-2">Indoor Positioning System (IPS)</h4>
-          <p>An indoor localization system combining a Random Forest model with Android/TFLite deployment and ESP32 firmware for real-time position estimation.</p>
+
+        <!-- Quick Facts -->
+        <div class="glass rounded-3xl p-6 reveal glow">
+
+          <h3 class="text-xl font-bold mb-6">
+            Quick Snapshot
+          </h3>
+
+          <div class="space-y-5">
+
+            <div>
+              <p class="text-gray-500 text-sm">Education</p>
+              <p class="font-semibold mt-1">
+                B.Tech ECE — NIT Delhi
+              </p>
+            </div>
+
+            <div>
+              <p class="text-gray-500 text-sm">Current Focus</p>
+              <p class="font-semibold mt-1">
+                VLSI • AI Hardware • ML
+              </p>
+            </div>
+
+            <div>
+              <p class="text-gray-500 text-sm">Research</p>
+              <p class="font-semibold mt-1">
+                Neuromorphic Computing
+              </p>
+            </div>
+
+            <div>
+              <p class="text-gray-500 text-sm">Interests</p>
+              <p class="font-semibold mt-1">
+                Devices • Embedded • Software
+              </p>
+            </div>
+
+          </div>
+
         </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="py-28 bg-gray-950 relative">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="text-center reveal">
+
+        <p class="text-cyan-400 uppercase tracking-[0.25em] text-sm font-semibold">
+          Technical Stack
+        </p>
+
+        <h2 class="mt-3 text-4xl md:text-5xl font-bold">
+          Skills & Tools
+        </h2>
+
+        <p class="mt-5 text-gray-400 max-w-2xl mx-auto">
+          Technologies and tools I use across software development,
+          embedded systems, semiconductor research and machine learning.
+        </p>
+
+      </div>
+
+      <!-- Skills Grid -->
+      <div
+        class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 mt-14"
+      >
+
+        <!-- C++ -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">C++</h3>
+          <p class="text-xs text-gray-500 mt-2">Programming</p>
+        </div>
+
+        <!-- DSA -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+
+          <svg
+            viewBox="0 0 100 100"
+            class="w-14 h-14 mx-auto mb-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+          >
+            <circle cx="25" cy="25" r="8" class="text-cyan-400"/>
+            <circle cx="75" cy="25" r="8" class="text-cyan-400"/>
+            <circle cx="50" cy="75" r="8" class="text-cyan-400"/>
+            <path
+              d="M32 29L43 68M68 29L57 68M33 25H67"
+            />
+          </svg>
+
+          <h3 class="font-semibold">DSA</h3>
+          <p class="text-xs text-gray-500 mt-2">Problem Solving</p>
+        </div>
+
+        <!-- Python -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">Python</h3>
+          <p class="text-xs text-gray-500 mt-2">ML • Automation</p>
+        </div>
+
+        <!-- MATLAB -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" alt="MATLAB logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">MATLAB</h3>
+          <p class="text-xs text-gray-500 mt-2">Signal Processing</p>
+        </div>
+
+        <!-- HTML / CSS -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">HTML & CSS</h3>
+          <p class="text-xs text-gray-500 mt-2">Web Development</p>
+        </div>
+
+        <!-- JavaScript -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">JavaScript</h3>
+          <p class="text-xs text-gray-500 mt-2">Frontend</p>
+        </div>
+
+        <!-- Tailwind -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">Tailwind CSS</h3>
+          <p class="text-xs text-gray-500 mt-2">UI Development</p>
+        </div>
+
+        <!-- Git -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">Git & GitHub</h3>
+          <p class="text-xs text-gray-500 mt-2">Version Control</p>
+        </div>
+
+        <!-- Cadence -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+
+          <svg
+            viewBox="0 0 100 100"
+            class="w-14 h-14 mx-auto mb-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="5"
+          >
+            <rect
+              x="25"
+              y="25"
+              width="50"
+              height="50"
+              rx="5"
+              class="text-purple-400"
+            />
+
+            <path
+              d="M25 38H12M25 50H12M25 62H12M75 38h13M75 50h13M75 62h13"
+            />
+
+            <path
+              d="M38 25V12M50 25V12M62 25V12M38 75v13M50 75v13M62 75v13"
+            />
+
+            <circle
+              cx="50"
+              cy="50"
+              r="10"
+              class="text-cyan-400"
+            />
+          </svg>
+
+          <h3 class="font-semibold">Cadence Virtuoso</h3>
+          <p class="text-xs text-gray-500 mt-2">VLSI Design</p>
+        </div>
+
+        <!-- Verilog A -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+
+          <svg
+            viewBox="0 0 100 100"
+            class="w-14 h-14 mx-auto mb-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="5"
+          >
+            <path
+              d="M10 58h15l8-30 13 55 10-45 8 20h26"
+              class="text-green-400"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <h3 class="font-semibold">Verilog-A</h3>
+          <p class="text-xs text-gray-500 mt-2">Device Modeling</p>
+        </div>
+
+        <!-- ESP32 -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg" alt="Arduino logo" class="w-14 h-14 mx-auto mb-4 object-contain">
+
+          <h3 class="font-semibold">ESP32 / Arduino</h3>
+          <p class="text-xs text-gray-500 mt-2">Embedded Systems</p>
+        </div>
+
+        <!-- AI Hardware -->
+        <div class="skill-card glass rounded-2xl p-6 text-center reveal">
+
+          <svg
+            viewBox="0 0 100 100"
+            class="w-14 h-14 mx-auto mb-4"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="4"
+          >
+            <rect
+              x="25"
+              y="25"
+              width="50"
+              height="50"
+              rx="8"
+              class="text-pink-400"
+            />
+
+            <circle cx="40" cy="43" r="4"/>
+            <circle cx="60" cy="43" r="4"/>
+            <circle cx="40" cy="60" r="4"/>
+            <circle cx="60" cy="60" r="4"/>
+
+            <path
+              d="M44 43h12M44 60h12M40 47v9M60 47v9"
+            />
+          </svg>
+
+          <h3 class="font-semibold">AI Hardware</h3>
+          <p class="text-xs text-gray-500 mt-2">Neuromorphic Computing</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-gray-900">
-    <div class="container mx-auto px-6 max-w-4xl text-center">
-      <h3 class="text-3xl font-bold mb-6 border-b pb-2 border-cyan-500">Contact Me</h3>
-      <p class="mb-4 text-lg">Feel free to connect with me for internships, placements, or collaborations.</p>
-      <div class="space-y-2">
-        <p>Email: <a href="mailto:241220046@nitdelhi.ac.in" class="text-cyan-400 underline">241220046@nitdelhi.ac.in</a></p>
-        <p>GitHub: <a href="https://github.com/RaviKumar046" class="text-cyan-400 underline">https://github.com/RaviKumar046</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/ravi-kumar-338667316" class="text-cyan-400 underline">https://www.linkedin.com/in/ravi-kumar-338667316</a></p>
-        <p>LeetCode: <a href="https://leetcode.com/ravi2k25" class="text-cyan-400 underline">ravi2k25</a></p>
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="py-28 bg-gray-900">
+
+    <div class="max-w-6xl mx-auto px-6">
+
+      <div class="reveal">
+
+        <p class="text-cyan-400 uppercase tracking-[0.25em] text-sm font-semibold">
+          Selected Work
+        </p>
+
+        <h2 class="mt-3 text-4xl md:text-5xl font-bold">
+          Projects & Research
+        </h2>
+
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-7 mt-12">
+
+        <!-- Project 1 -->
+        <article
+          class="project-card glass rounded-3xl p-7 reveal"
+        >
+
+          <div class="flex justify-between items-start gap-4">
+
+            <div
+              class="w-14 h-14 rounded-2xl bg-cyan-400/10 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="w-7 h-7 text-cyan-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <rect
+                  x="6"
+                  y="6"
+                  width="12"
+                  height="12"
+                  rx="2"
+                />
+
+                <path
+                  d="M9 2v4M12 2v4M15 2v4M9 18v4M12 18v4M15 18v4M2 9h4M2 12h4M2 15h4M18 9h4M18 12h4M18 15h4"
+                />
+              </svg>
+            </div>
+
+            <span
+              class="text-xs px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400"
+            >
+              Research
+            </span>
+
+          </div>
+
+          <h3 class="text-2xl font-bold mt-6">
+            FTJ-Based Crossbar Array Design
+          </h3>
+
+          <p class="text-gray-400 mt-4 leading-7">
+            Research project on Ferroelectric Tunnel Junction based
+            neuromorphic computing. Implemented VGG-8 in PyTorch for
+            CIFAR-10, applied quantization-aware training and explored
+            hardware-aware inference through crossbar weight mapping.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-6">
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              Cadence Virtuoso
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              Verilog-A
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              PyTorch
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              FTJ
+            </span>
+
+          </div>
+
+        </article>
+
+        <!-- Project 2 -->
+        <article
+          class="project-card glass rounded-3xl p-7 reveal"
+        >
+
+          <div class="flex justify-between items-start gap-4">
+
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-400/10 flex items-center justify-center"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="w-7 h-7 text-blue-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <circle cx="12" cy="12" r="8" />
+                <circle cx="12" cy="12" r="2" />
+                <path
+                  d="M12 4V2M12 22v-2M20 12h2M2 12h2"
+                />
+              </svg>
+            </div>
+
+            <span
+              class="text-xs px-3 py-1 rounded-full bg-blue-400/10 text-blue-400"
+            >
+              ML + Embedded
+            </span>
+
+          </div>
+
+          <h3 class="text-2xl font-bold mt-6">
+            Indoor Positioning System
+          </h3>
+
+          <p class="text-gray-400 mt-4 leading-7">
+            Indoor localization system combining Wi-Fi signal
+            fingerprinting, a Random Forest model, Android/TFLite
+            deployment and ESP32-based data collection for position
+            estimation.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-6">
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              Python
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              Random Forest
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              TFLite
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              ESP32
+            </span>
+
+          </div>
+
+        </article>
+
+        <!-- Project 3 -->
+        <article
+          class="project-card glass rounded-3xl p-7 reveal"
+        >
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-purple-400/10 flex items-center justify-center"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              class="w-7 h-7 text-purple-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+            >
+              <path
+                d="M4 5h16M4 12h16M4 19h16"
+              />
+
+              <circle cx="8" cy="5" r="2"/>
+              <circle cx="15" cy="12" r="2"/>
+              <circle cx="10" cy="19" r="2"/>
+            </svg>
+
+          </div>
+
+          <h3 class="text-2xl font-bold mt-6">
+            Optical Communication Research
+          </h3>
+
+          <p class="text-gray-400 mt-4 leading-7">
+            Simulation work on delay attack-resistant OCDMA systems
+            using optical coding, optical orthogonal codes and matched
+            decoding for secure optical communication.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-6">
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              OptiSystem
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              OCDMA
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              BER
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              Optical Coding
+            </span>
+
+          </div>
+
+        </article>
+
+        <!-- Project 4 -->
+        <article
+          class="project-card glass rounded-3xl p-7 reveal"
+        >
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-green-400/10 flex items-center justify-center"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              class="w-7 h-7 text-green-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+            >
+              <path
+                d="M12 3v18M3 12h18"
+              />
+
+              <circle cx="12" cy="12" r="8" />
+
+              <path
+                d="M8 8l8 8M16 8l-8 8"
+              />
+            </svg>
+
+          </div>
+
+          <h3 class="text-2xl font-bold mt-6">
+            Semiconductor Fabrication
+          </h3>
+
+          <p class="text-gray-400 mt-4 leading-7">
+            Hands-on semiconductor fabrication experience through
+            CSIR-CEERI Pilani, including wafer cleaning, oxidation,
+            photolithography, diffusion, gate oxide formation,
+            metallization and electrical characterization.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-6">
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              Fabrication
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              MOS Capacitor
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              PN Junction
+            </span>
+
+            <span class="px-3 py-1 rounded-full bg-gray-800 text-sm text-gray-300">
+              I-V / C-V
+            </span>
+
+          </div>
+
+        </article>
+
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-center py-4">
-    <p>&copy; 2026 Ravi Kumar | All Rights Reserved</p>
+  <!-- ================= EDUCATION / EXPERIENCE ================= -->
+  <section class="py-28 bg-gray-950">
+
+    <div class="max-w-5xl mx-auto px-6">
+
+      <div class="text-center reveal">
+
+        <p class="text-cyan-400 uppercase tracking-[0.25em] text-sm font-semibold">
+          Journey
+        </p>
+
+        <h2 class="mt-3 text-4xl md:text-5xl font-bold">
+          Education & Experience
+        </h2>
+
+      </div>
+
+      <div class="relative mt-14">
+
+        <!-- Timeline line -->
+        <div
+          class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gray-800"
+        ></div>
+
+        <!-- Item 1 -->
+        <div
+          class="relative mb-12 md:flex md:justify-between md:items-center reveal"
+        >
+
+          <div class="ml-10 md:ml-0 md:w-[45%] md:text-right">
+            <p class="text-cyan-400 font-semibold">
+              2024 – 2028
+            </p>
+
+            <h3 class="text-xl font-bold mt-1">
+              B.Tech — Electronics & Communication Engineering
+            </h3>
+
+            <p class="text-gray-400 mt-2">
+              National Institute of Technology Delhi
+            </p>
+          </div>
+
+          <div
+            class="timeline-marker absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-gray-950 border-4 border-cyan-400"
+          ></div>
+
+          <div class="hidden md:block md:w-[45%]"></div>
+
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          class="relative mb-12 md:flex md:justify-between md:items-center reveal"
+        >
+
+          <div class="hidden md:block md:w-[45%]"></div>
+
+          <div
+            class="timeline-marker absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-gray-950 border-4 border-blue-400"
+          ></div>
+
+          <div class="ml-10 md:ml-0 md:w-[45%]">
+
+            <p class="text-blue-400 font-semibold">
+              2026
+            </p>
+
+            <h3 class="text-xl font-bold mt-1">
+              Research Internship — IIT Ropar
+            </h3>
+
+            <p class="text-gray-400 mt-2">
+              Worked on FTJ-based crossbar architectures and
+              neuromorphic computing.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- Item 3 -->
+        <div
+          class="relative md:flex md:justify-between md:items-center reveal"
+        >
+
+          <div class="ml-10 md:ml-0 md:w-[45%] md:text-right">
+
+            <p class="text-purple-400 font-semibold">
+              Semiconductor Training
+            </p>
+
+            <h3 class="text-xl font-bold mt-1">
+              CSIR-CEERI Pilani
+            </h3>
+
+            <p class="text-gray-400 mt-2">
+              Semiconductor fabrication and device characterization
+              through SHILP training.
+            </p>
+
+          </div>
+
+          <div
+            class="timeline-marker absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-gray-950 border-4 border-purple-400"
+          ></div>
+
+          <div class="hidden md:block md:w-[45%]"></div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="py-28 bg-gray-900">
+
+    <div class="max-w-5xl mx-auto px-6 text-center reveal">
+
+      <p class="text-cyan-400 uppercase tracking-[0.25em] text-sm font-semibold">
+        Get In Touch
+      </p>
+
+      <h2 class="mt-3 text-4xl md:text-6xl font-bold">
+        Let's build something
+        <span class="gradient-text">interesting.</span>
+      </h2>
+
+      <p class="mt-6 text-gray-400 text-lg max-w-2xl mx-auto">
+        I'm interested in internships, research opportunities,
+        software projects, hardware development and technical
+        collaborations.
+      </p>
+
+      <!-- Email -->
+      <a
+        href="mailto:24ravi46@gmail.com"
+        class="inline-flex items-center gap-3 mt-10 px-7 py-4 rounded-full bg-cyan-500 text-gray-950 font-bold hover:bg-cyan-400 hover:-translate-y-1 transition shadow-lg shadow-cyan-500/20"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
+        </svg>
+
+        Send Me an Email
+      </a>
+
+      <!-- Contact Links -->
+      <div
+        class="mt-10 flex flex-col md:flex-row justify-center gap-4"
+      >
+
+        <a
+          href="https://github.com/RaviKumar046"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn glass px-5 py-3 rounded-xl"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/ravi-kumar-338667316"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn glass px-5 py-3 rounded-xl"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://leetcode.com/ravi2k25"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-btn glass px-5 py-3 rounded-xl"
+        >
+          LeetCode
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-gray-950 border-t border-white/5">
+
+    <div
+      class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+    >
+
+      <p class="text-gray-500 text-sm">
+        © 2026 Ravi Kumar. All rights reserved.
+      </p>
+
+      <p class="text-gray-600 text-sm">
+        Built with HTML • Tailwind CSS • JavaScript
+      </p>
+
+    </div>
+
   </footer>
+
+  <!-- Back to top -->
+  <button
+    id="topBtn"
+    class="fixed bottom-6 right-6 hidden w-11 h-11 rounded-full bg-cyan-500 text-gray-950 font-bold shadow-lg shadow-cyan-500/20 hover:bg-cyan-400 transition z-40"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    /* Mobile menu */
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const themeBtn = document.getElementById("themeBtn");
+
+    themeBtn.addEventListener("click", () => {
+      const nextTheme =
+        document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = nextTheme;
+      themeBtn.setAttribute(
+        "aria-label",
+        `Switch to ${nextTheme === "dark" ? "light" : "dark"} mode`
+      );
+      themeBtn.title = `Switch to ${nextTheme === "dark" ? "light" : "dark"} mode`;
+
+      try {
+        localStorage.setItem("portfolio-theme", nextTheme);
+      } catch {
+        // Theme still works for this page load when storage is unavailable.
+      }
+    });
+
+    themeBtn.setAttribute(
+      "aria-label",
+      `Switch to ${document.documentElement.dataset.theme === "dark" ? "light" : "dark"} mode`
+    );
+    themeBtn.title = themeBtn.getAttribute("aria-label");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll("#mobileMenu a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+
+    /* Typing effect */
+    const typingText = document.getElementById("typingText");
+
+    const words = [
+      "ECE Student at NIT Delhi",
+      "VLSI & Semiconductor Enthusiast",
+      "AI Hardware Explorer",
+      "Embedded Systems Developer",
+      "Machine Learning Learner"
+    ];
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typeEffect() {
+
+      const currentWord = words[wordIndex];
+
+      if (!deleting) {
+
+        typingText.textContent =
+          currentWord.substring(0, charIndex + 1);
+
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+
+          deleting = true;
+
+          setTimeout(typeEffect, 1600);
+          return;
+        }
+
+      } else {
+
+        typingText.textContent =
+          currentWord.substring(0, charIndex - 1);
+
+        charIndex--;
+
+        if (charIndex === 0) {
+
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+
+      setTimeout(typeEffect, deleting ? 45 : 75);
+    }
+
+    typeEffect();
+
+
+    /* Scroll reveal */
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("show");
+
+              observer.unobserve(entry.target);
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+
+    /* Back to top */
+    const topBtn =
+      document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+        topBtn.classList.remove("hidden");
+      } else {
+        topBtn.classList.add("hidden");
+      }
+
+    });
+
+    topBtn.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+  </script>
 
 </body>
 </html>
