@@ -1,151 +1,54 @@
-# Ravi Kumar - Portfolio Website 
+# Ravi Kumar Portfolio
 
-A modern, responsive personal portfolio website showcasing skills, projects, and experience as an ECE student at NIT Delhi.
+This is a personal portfolio website for Ravi Kumar, showcasing education, skills, projects, and contact information.
 
-## 🌟 Features
+## Project Overview
 
-- **Responsive Design**: Fully responsive layout that works on desktop, tablet, and mobile devices
-- **Modern UI**: Built with Tailwind CSS for a clean, professional appearance
-- **Smooth Navigation**: Smooth scrolling navigation with fixed navbar
-- **Sections Included**:
-  - Hero section with introduction
-  - About me with background information
-  - Skills showcase
-  - Project portfolio
-  - Contact information
-  - Footer
+The site includes:
+- a hero section with introduction and animated typing effect
+- about section with academic and research background
+- skills and tools section
+- selected projects and research work
+- timeline for education and experience
+- contact section with social links and email
+- dark/light theme toggle
+- responsive mobile-friendly layout
 
-## 🛠 Technologies Used
+## Files
 
-- **HTML5**: Semantic markup
-- **CSS3**: Tailwind CSS framework for styling
-- **JavaScript**: Smooth scrolling (built into Tailwind)
-- **Responsive Design**: Mobile-first approach
+- `index.html` — main page structure and content
+- `portimg.jpeg` — profile image used in the portfolio
 
-## 📂 Project Structure
+## How to Run
 
-```
-Ravi_Porfolio/
-├── Portfolioravi.html    # Main portfolio file
-└── README.md             # This file
-```
+Since this is a static website, you can open it directly in a browser:
 
-## 🚀 How to Use
-
-### Option 1: Open Locally
-1. Download the repository
-2. Open `Portfolioravi.html` in your web browser
-3. Click through the navigation links to explore sections
-
-### Option 2: Deploy Online
-You can deploy this portfolio on:
-- **GitHub Pages** (Free)
-- **Vercel** (Free)
-- **Netlify** (Free)
-- **Traditional Web Hosting**
-
-## 📋 Customization
-
-To customize the portfolio:
-
-1. **Update Personal Information**:
-   - Change the name "Ravi Kumar" to your name
-   - Update the title and headline
-   - Add your own photo/icon
-
-2. **Modify Sections**:
-   - Edit the About section with your bio
-   - Add/remove skills in the Skills section
-   - Update projects with your own
-   - Change contact links to your social profiles
-
-3. **Change Colors**:
-   - Modify Tailwind CSS classes (e.g., `text-cyan-400` → other colors)
-   - Update `bg-gray-*` classes for background colors
-
-## 📝 How to Commit to GitHub
-
-### Prerequisites
-- Git installed on your machine ([Download Git](https://git-scm.com/))
-- GitHub account ([Create one here](https://github.com/))
-
-### Step-by-Step Guide
-
-#### 1. **Initialize Git Repository** (First time only)
-```bash
-cd c:\Users\hp\Desktop\CODING\Ravi_Porfolio
-git init
-```
-
-#### 2. **Configure Git** (First time only)
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your.email@example.com"
-```
-
-#### 3. **Create a GitHub Repository**
-- Go to [GitHub.com](https://github.com/)
-- Click the **+** icon → **New repository**
-- Name it `Ravi_Porfolio` (or any name)
-- Click **Create repository**
-- Copy the repository URL (HTTPS or SSH)
-
-#### 4. **Add Remote Origin**
-```bash
-git remote add origin https://github.com/your-username/Ravi_Porfolio.git
-```
-
-#### 5. **Stage Files**
-```bash
-git add .
-# or add specific files:
-# git add Portfolioravi.html
-# git add README.md
-```
-
-#### 6. **Commit Changes**
-```bash
-git commit -m "Initial commit: Add portfolio website and README"
-```
-
-#### 7. **Push to GitHub**
-```bash
-git branch -M main
-git push -u origin main
-```
-
-### For Subsequent Updates
-
-After making changes:
+1. Open the folder containing the project.
+2. Double-click `index.html` or open it with a browser.
+3. Alternatively, run a local static server from the project folder:
 
 ```bash
-# 1. Check status
-git status
-
-# 2. Stage changes
-git add .
-
-# 3. Commit with a descriptive message
-git commit -m "Update: Add new project / Fix styling / Update contact info"
-
-# 4. Push to GitHub
-git push origin main
+python -m http.server 8000
 ```
 
- 
- 
+Then visit:
 
-## 📞 Contact
+```text
+http://localhost:8000/
+```
 
-- **Email**: 241220046@nitdelhi.ac.in
-- **GitHub**: https://github.com/RaviKumar046
-- **LinkedIn**: https://www.linkedin.com/in/ravi-kumar-338667316
-- **LeetCode**: https://leetcode.com/ravi2k25
+## Customization
 
-## 📄 License
+You can update the following easily:
+- personal name and title text in `index.html`
+- contact links and email address
+- project descriptions and skill entries
+- theme colors and styling in the embedded CSS
+- profile image file
 
-This project is open source and available under the MIT License.
+## Technologies Used
 
----
-
-**Last Updated**: 2026-07-02
+- HTML
+- CSS
+- Tailwind CSS
+- JavaScript
