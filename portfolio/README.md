@@ -56,9 +56,9 @@ The portfolio is designed to provide a quick overview of my academic journey, te
 ```text
 Ravi-Kumar-Portfolio/
 │
-├── index.html        # Main portfolio page
-├── portimg.jpeg      # Profile image
-└── README.md         # Project documentation
+├── Portfolioravi.html    # Main portfolio page
+├── portimg.jpeg          # Profile image
+└── README.md             # Project documentation
 ```
 
 ---
@@ -76,7 +76,7 @@ git clone <YOUR_GITHUB_REPOSITORY_URL>
 ```
 
 2. Open the project folder.
-3. Double-click `index.html`.
+3. Double-click `Portfolioravi.html`.
 
 ### Option 2 — Run a local server
 
@@ -96,7 +96,7 @@ http://localhost:8000
 
 ## 🎨 Customization
 
-You can easily customize the portfolio by editing `index.html`.
+You can easily customize the portfolio by editing `Portfolioravi.html`.
 
 You can update:
 
