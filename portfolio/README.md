@@ -1,4 +1,4 @@
-# Ravi Kumar - Portfolio Website
+# Ravi Kumar - Portfolio Website 
 
 A modern, responsive personal portfolio website showcasing skills, projects, and experience as an ECE student at NIT Delhi.
 
@@ -132,32 +132,8 @@ git commit -m "Update: Add new project / Fix styling / Update contact info"
 git push origin main
 ```
 
-### Useful Git Commands
-
-```bash
-# View commit history
-git log
-
-# Check current status
-git status
-
-# Undo last commit (keep changes)
-git reset --soft HEAD~1
-
-# View changes before committing
-git diff
-
-# Clone your repository (on another machine)
-git clone https://github.com/your-username/Ravi_Porfolio.git
-```
-
-## 🌐 Deploy on GitHub Pages
-
-1. Go to your repository settings on GitHub
-2. Scroll to **Pages** section
-3. Under "Source", select **main** branch
-4. Click **Save**
-5. Your site will be available at: `https://your-username.github.io/Ravi_Porfolio`
+ 
+ 
 
 ## 📞 Contact
 
